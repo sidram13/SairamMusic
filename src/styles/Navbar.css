@@ -1,0 +1,25 @@
+nav{
+    background-color: #dc5f00cb;
+    height: 60px;
+    color: black;
+}
+.buttonbtn{
+    color: white;
+    background-color: black;
+    border: none;
+}
+.buttonbtn:hover{
+    background-color: white;
+    color: black;
+}
+.inputtab{
+    background-color: #c0afaf;
+    outline: none;
+    border: none;
+    color: black;
+}
+.inputtab:focus{
+    background-color: white;
+    color: black;
+
+}
