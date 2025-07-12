@@ -1,7 +1,8 @@
+// src\components\Card.js
 import React, { useContext, useEffect } from "react";
 import { MusicContext } from "../Context";
-import { FaHeart,FaThumbtack } from "react-icons/fa";
-import { MdLocationOff,MdClose } from "react-icons/md";
+import { FaHeart, FaThumbtack } from "react-icons/fa";
+import { MdLocationOff, MdClose } from "react-icons/md";
 
 function Card({ element }) {
   const musicContext = useContext(MusicContext);
@@ -69,23 +70,23 @@ function Card({ element }) {
                   onClick={handlePin}
                   className="btn btn-outline-dark mx-1"
                 >
-                  <MdClose/>
+                  <MdClose />
                 </button>
               ) : (
-                <button 
+                <button
                   onClick={handlePin}
                   className="btn btn-outline-dark mx-1"
                 >
-                <FaThumbtack />
+                  <FaThumbtack />
                 </button>
               )}
               {likedMusic.some((item) => item.id === element.id) ? (
                 <button onClick={handleLike} className="btn btn-outline-dark">
-                  <MdClose/>
+                  <MdClose />
                 </button>
               ) : (
                 <button onClick={handleLike} className="btn btn-outline-dark">
-                  <FaHeart /  >
+                  <FaHeart />
                 </button>
               )}
             </div>
@@ -94,7 +95,13 @@ function Card({ element }) {
           <p className="card-text">
             Release date: {element.album.release_date}
           </p>
-          <audio src={element.preview_url} controls  className="w-100"></audio>
+          <audio src={element.preview_url} controls className="w-100"></audio>
+          {element.preview_url ? (
+            <audio src={element.preview_url} controls className="w-100" />
+          ) : (
+            <p className="text-muted small fst-italic">Preview not available</p>
+          )}
+
         </div>
       </div>
     </div>

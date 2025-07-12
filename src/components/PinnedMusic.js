@@ -1,3 +1,4 @@
+// src\components\PinnedMusic.js
 import React, { useContext, useEffect } from "react";
 import Card from "./Card";
 import { MusicContext } from "../Context";

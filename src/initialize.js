@@ -1,4 +1,5 @@
-// cheking for current playlist in browser
+// src\initialize.js
+// src\initialize.js
 
 export const initializePlaylist = () => {
   let likedMusic = localStorage.getItem("likedMusic");

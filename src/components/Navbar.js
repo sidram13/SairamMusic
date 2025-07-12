@@ -1,3 +1,4 @@
+// src\components\Navbar.js
 import React, { useContext } from "react";
 import '../styles/Navbar.css'
 import { FaHeart,FaThumbtack } from "react-icons/fa";
